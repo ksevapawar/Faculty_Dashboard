@@ -17,11 +17,26 @@
       <div class="login__form">
           
 
-			
+			<script type="text/javascript" language="javascript">
+						function validateform(){
+							var captcha_response = grecaptcha.getResponse();
+								if(captcha_response.length == 0)
+										{
+
+    									return false;
+										}
+								else
+							{
+
+    							return true;
+								}
+						}
+		</script>
 			{% block content %}
 		
 			 
-			 <form method="post">
+			<form method="POST" onsubmit="return validateform();">
+	
 			     {% csrf_token %}		       	
 			   	 
 			   	 <div class="login__row">
