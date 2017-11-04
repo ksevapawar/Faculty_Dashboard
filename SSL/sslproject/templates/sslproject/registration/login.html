@@ -14,10 +14,12 @@
   <div class="demo">
     <div class="login">
       <div class="login__check"></div>
-      <div class="login__form">          
+      <div class="login__form">
+          
 
 			
-			{% block content %}		
+			{% block content %}
+		
 			 
 			 <form method="post">
 			     {% csrf_token %}		       	
@@ -26,7 +28,7 @@
 			   	  <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
             		<path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
          		 </svg>
-			   	 <input class="login__input name" type="text" placeholder="Username" name="username" autofocus maxlength="254" id="id_username" required />
+			   	 <input class="login__input name" type="text" placeholder="Username" name="username" autofocus maxlength="254" id="id_username" required /></td></tr>
 			   	 </div>
 
 				 <div class="login__row">
@@ -34,13 +36,20 @@
            		 <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
          		 </svg>
          		 
-				<input type="password" class="login__input pass" placeholder="Password" name="password" required id="id_password" />	
+				<input type="password" class="login__input pass" placeholder="Password" name="password" required id="id_password" /></td></tr>		
 				</div> 
-			    
+				<br/>
+			
+<script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha"  data-sitekey="6LeLLjcUAAAAAMzx_W01CASCPiWl-FD1H9elXaMC" style="transform:scale(0.77);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>	    
+
+
 			    <button  class="login__submit" type="submit">Login</button>
 			  </form>
 			{% endblock %}
 
+    <!--     <a href="https://www.google.com" ><div class="login__submit">Sign in</div></a> -->
+       
        <p class="login__signup">Don't have an account? &nbsp;<a href="/signup">Sign up</a></p>
      
      </div>
