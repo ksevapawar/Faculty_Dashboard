@@ -24,7 +24,7 @@ SECRET_KEY = 'zcur7_disc!#p%lq_y^v7sc6bi%bbcj2tfir7aazklr0^$8xv&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+LOGIN_REDIRECT_URL = '/account/'
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sslproject.apps.SslprojectConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,14 @@ ROOT_URLCONF = 'SSL.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+        # '/home/harshit-sharma/SSL_project/SSL/SSL/templates/'
+       # /home/harshit-sharma/SSL_project/SSL
+        # 'os.path.join(BASE_DIR,"/SSL/templates/")'
+        #PROJECT_ROOT = os.path.dirname(os.path.abspath(__SSL__))
+        os.path.abspath(os.path.join(BASE_DIR, "sslproject", "templates","sslproject")),
+        #'os.path.join(BASE_DIR,PROJECT_ROOT)',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
