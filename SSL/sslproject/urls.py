@@ -20,8 +20,9 @@ from . import views
 
 
 urlpatterns = [
-     url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
-    url(r'^account/$', views.index,name='index'),
+    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^logout/$', views.logout_view, name='logout'),
+    url(r'^accounts/profile/$', views.index,name='index'),
+    url(r'^accounts/login/$', auth_views.login, name='login'),  
     url(r'^signup/$', views.signup, name='signup'),
 ]

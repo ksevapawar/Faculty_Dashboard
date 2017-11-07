@@ -24,7 +24,7 @@ SECRET_KEY = 'zcur7_disc!#p%lq_y^v7sc6bi%bbcj2tfir7aazklr0^$8xv&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-LOGIN_REDIRECT_URL = '/account/'
+
 ALLOWED_HOSTS = []
 
 
