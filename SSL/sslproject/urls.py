@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', views.logout_view, name='logout'),
     url(r'^accounts/profile/$', views.index,name='index'),
-    url(r'^accounts/login/$', auth_views.login, name='login'),  
-    url(r'^signup/$', views.signup, name='signup'),
+    url(r'^accounts/login/$', auth_views.login, name='login'),
+    url(r'^accounts/profile/user/$', views.edit_profile, name='user'),
+    url(r'^signup/$', views.signup, name='edirprofile'),
 ]
