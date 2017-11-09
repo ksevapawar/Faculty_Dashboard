@@ -24,16 +24,9 @@ SECRET_KEY = 'zcur7_disc!#p%lq_y^v7sc6bi%bbcj2tfir7aazklr0^$8xv&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 ALLOWED_HOSTS = []
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'harigogogo@gmail.com'
-EMAIL_HOST_PASSWORD = '9thstandard'
-EMAIL_PORT = 587
-ACCOUNT_ACTIVATION_DAYS = 1
-REGISTRATION_AUTO_LOGIN = True
-SITE_ID = 1
+
 
 # Application definition
 
