@@ -16,12 +16,12 @@ def index(request):
 
 def signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST,instance=request.user)
-        form2=SignUpForm2(request.POST,instance=request.user.employee)
+        form = SignUpForm(request.POST)
+        # form2=SignUpForm2(request.POST,instance=request.user.employee)
         if form.is_valid():
             form.save()
-        if form2.is_valid():
-            form2.save()
+        # if form2.is_valid():
+        #     form2.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
            # u= User.objects.get(username=username)
