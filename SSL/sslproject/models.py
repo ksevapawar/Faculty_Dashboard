@@ -20,7 +20,7 @@ class Employee(models.Model):
     class Meta:
         verbose_name_plural = "User Profiles"
 
-    def __unicode__(self):
+    def __str__(self):
         return self.user.username
 
 
@@ -34,11 +34,26 @@ class Teaching(models.Model):
     start_date =  models.DateField(default=datetime.date.today)
     end_date = models.DateField(default=datetime.date.today)
 
+    def __str__(self):
+        return self.user.username
+
 class Publication(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='publication')
     pub = models.CharField(max_length=300)
 
+    def __str__(self):
+        return self.user.username
 
+
+class Education(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='education')
+    degree = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+    institute = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.user.username
 
 
 

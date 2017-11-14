@@ -1,7 +1,8 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from sslproject.models import Employee, Teaching, Publication
-from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform, Publicationform
+from sslproject.models import Employee, Teaching, Publication, Education
+from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform, Publicationform, \
+    Educationform
 # Create your views here.
 
 from django.contrib.auth import login, authenticate
@@ -15,7 +16,7 @@ def index(request):
     return render(request, 'dashboard/index.html')
 
 def user_table(request):
-    return render(request, 'dashboard/table.html')
+    return render(request, 'dashboard/teaching.html')
 
 def signup(request):
     if request.method == 'POST':
@@ -77,7 +78,7 @@ def teaching(request):
         return redirect('/accounts/profile/table/')
 
     else :
-        return render(request,'dashboard/table.html',{'Teaching':Teaching.objects.filter(user=request.user.id)})
+        return render(request,'dashboard/teaching.html',{'Teaching':Teaching.objects.filter(user=request.user.id)})
 
 def publication(request):
     if request.method == 'POST':
@@ -90,7 +91,24 @@ def publication(request):
         return redirect('/accounts/profile/publication/')
 
     else:
-        return render(request, 'dashboard/typography.html', {'Publication': Publication.objects.filter(user=request.user.id)})
+        return render(request, 'dashboard/publication.html', {'Publication': Publication.objects.filter(user=request.user.id)})
+
+def education(request):
+    if request.method == 'POST':
+        form = Educationform(request.POST)
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            edu = Education(user=request.user);
+            edu.degree  = cleaned_data['degree']
+            edu.department = cleaned_data['department']
+            edu.institute = cleaned_data['institute']
+            edu.country = cleaned_data['country']
+            edu.save()
+        return redirect('/accounts/profile/education/')
+
+    else:
+        return render(request, 'dashboard/education.html', {'Education': Education.objects.filter(user=request.user.id)})
+
 
 def function(request,part_id =None):
     object = Teaching.objects.get(id=part_id)
@@ -102,3 +120,9 @@ def function2(request,part_id =None):
     object = Publication.objects.get(id=part_id)
     object.delete()
     return redirect('/accounts/profile/publication/')
+
+def function3(request,part_id =None):
+    object = Education.objects.get(id=part_id)
+    object.delete()
+    return redirect('/accounts/profile/education/')
+
