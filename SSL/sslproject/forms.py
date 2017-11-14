@@ -13,10 +13,16 @@ class SignUpForm(UserCreationForm):
 
 class SignUpForm2(forms.ModelForm):
     department=forms.CharField(max_length=30, required=False)
+    mobileNo = forms.CharField(max_length=30, required=False)
+    designation = forms.CharField(max_length=30, required=False)
+    gender = forms.CharField(max_length=30, required=False)
+    currentinstitute = forms.CharField(max_length=30, required=False)
+    year = forms.CharField(max_length=30, required=False)
+    address = forms.CharField(max_length=30, required=False)
 
     class Meta:
         model = Employee
-        fields=('department',)
+        fields=('department','mobileNo','designation','gender','currentinstitute','year','address')
 
 class EditProfileForm(forms.ModelForm):
     first_name = forms.CharField(max_length=30, help_text='Optional.')
@@ -33,7 +39,13 @@ class EditProfileForm(forms.ModelForm):
 class EditProfileForm2(forms.ModelForm):
 
     department = forms.CharField(max_length=30 , help_text='Optional.')
+    mobileNo = forms.CharField(max_length=30, help_text='Optional.')
+    designation = forms.CharField(max_length=30, help_text='Optional.')
+    gender = forms.CharField(max_length=30, help_text='Optional.')
+    currentinstitute = forms.CharField(max_length=30, help_text='Optional.')
+    year = forms.CharField(max_length=30, help_text='Optional.')
+    address = forms.CharField(max_length=30, help_text='Optional.')
     avatar = forms.ImageField()
     class Meta:
         model = Employee
-        fields = ('department','avatar')
+        fields = ('department','mobileNo','designation','gender','avatar','currentinstitute','year','address')
