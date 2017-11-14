@@ -1,5 +1,7 @@
+import datetime
 from django.contrib.auth.models import User
 from django.db import models
+
 from django.db.models.signals import post_save
 
 
@@ -25,6 +27,12 @@ class Employee(models.Model):
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         Employee.objects.create(user=instance)
+
+class Teaching(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE,related_name='teaching')
+    course = models.CharField(max_length=100)
+    start_date =  models.DateField(default=datetime.date.today)
+    end_date = models.DateField(default=datetime.date.today)
 
 
 post_save.connect(create_user_profile, sender=User)

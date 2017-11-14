@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^accounts/profile/$', views.index,name='index'),
     url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^accounts/profile/user/$', views.edit_profile, name='user'),
+    url(r'^accounts/profile/table/$', views.teaching, name='table'),
     url(r'^signup/$', views.signup, name='editprofile'),
 
 

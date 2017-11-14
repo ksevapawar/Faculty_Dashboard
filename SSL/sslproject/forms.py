@@ -1,8 +1,9 @@
+import datetime
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 
-from sslproject.models import Employee
+from sslproject.models import Employee, Teaching
 
 
 class SignUpForm(UserCreationForm):
@@ -49,3 +50,13 @@ class EditProfileForm2(forms.ModelForm):
     class Meta:
         model = Employee
         fields = ('department','mobileNo','designation','gender','avatar','currentinstitute','year','address')
+
+
+class Teachingform(forms.ModelForm):
+    course = forms.CharField(max_length=30 , help_text='Optional.')
+    start_date = forms.DateField()
+    end_date = forms.DateField()
+
+    class Meta:
+        model = Teaching
+        fields = ('course','start_date','end_date')

@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from sslproject.models import Employee
-from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2
+from sslproject.models import Employee, Teaching
+from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform
 # Create your views here.
 
 from django.contrib.auth import login, authenticate
@@ -13,6 +13,9 @@ from django.contrib.auth.decorators import login_required
 @login_required(login_url='/login')
 def index(request):
     return render(request, 'dashboard/index.html')
+
+def user_table(request):
+    return render(request, 'dashboard/table.html')
 
 def signup(request):
     if request.method == 'POST':
@@ -57,3 +60,22 @@ def edit_profile(request):
     else:
 
         return render(request, 'dashboard/user.html')
+
+def teaching(request):
+    if request.method == 'POST':
+        form = Teachingform(request.POST)
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            teach = Teaching(user=request.user);
+            teach.course=cleaned_data['course']
+            teach.start_date=cleaned_data['start_date']
+            teach.end_date=cleaned_data['end_date']
+            #form = Teachingform(request.POST,instance=teach)
+            #teach.course = form.course
+            #if form.is_valid():
+            teach.save()
+        return redirect('/accounts/profile/table/')
+
+    else :
+        return render(request,'dashboard/table.html',{'Teaching':Teaching.objects.filter(user=request.user.id)})
+
