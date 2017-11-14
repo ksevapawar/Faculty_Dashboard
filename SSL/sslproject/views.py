@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from sslproject.models import Employee, Teaching, Publication, Education
+from sslproject.models import Employee, Teaching, Publication, Education, Projects
 from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform, Publicationform, \
-    Educationform
+    Educationform, Projectsform
 # Create your views here.
 
 from django.contrib.auth import login, authenticate
@@ -109,6 +109,22 @@ def education(request):
     else:
         return render(request, 'dashboard/education.html', {'Education': Education.objects.filter(user=request.user.id)})
 
+def projects(request):
+    if request.method == 'POST':
+        form = Projectsform(request.POST)
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            pro = Projects(user=request.user);
+            pro.title  = cleaned_data['title']
+            pro.sponser = cleaned_data['sponser']
+            pro.duration = cleaned_data['duration']
+            pro.role = cleaned_data['role']
+            pro.save()
+        return redirect('/accounts/profile/projects/')
+
+    else:
+        return render(request, 'dashboard/projects.html', {'Projects': Projects.objects.filter(user=request.user.id)})
+
 
 def function(request,part_id =None):
     object = Teaching.objects.get(id=part_id)
@@ -125,4 +141,9 @@ def function3(request,part_id =None):
     object = Education.objects.get(id=part_id)
     object.delete()
     return redirect('/accounts/profile/education/')
+
+def function4(request,part_id =None):
+    object = Projects.objects.get(id=part_id)
+    object.delete()
+    return redirect('/accounts/profile/projects/')
 

@@ -3,7 +3,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 
-from sslproject.models import Employee, Teaching, Publication, Education
+from sslproject.models import Employee, Teaching, Publication, Education, Projects
 
 
 class SignUpForm(UserCreationForm):
@@ -77,3 +77,13 @@ class Educationform(forms.ModelForm):
     class Meta:
         model = Education
         fields = ('degree','department','institute','country')
+
+class Projectsform(forms.ModelForm):
+    title = forms.CharField(max_length=300 , help_text='Optional.')
+    sponser = forms.CharField(max_length=300 , help_text='Optional.')
+    duration = forms.CharField(max_length=300 , help_text='Optional.')
+    role = forms.CharField(max_length=300 , help_text='Optional.')
+
+    class Meta:
+        model = Projects
+        fields = ('title','sponser','duration','role')

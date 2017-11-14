@@ -55,6 +55,14 @@ class Education(models.Model):
     def __str__(self):
         return self.user.username
 
+class Projects(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='projects')
+    title = models.CharField(max_length=300)
+    sponser = models.CharField(max_length=300)
+    duration = models.CharField(max_length=100)
+    role = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.user.username
 
 post_save.connect(create_user_profile, sender=User)

@@ -1,4 +1,4 @@
-<!doctype html>
+    <!doctype html>
 <html lang="en">
 {% load static %}
 <head>
@@ -19,6 +19,28 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 </head>
+
+
+
+<script type="text/javascript">
+    var datefield=document.createElement("input")
+    datefield.setAttribute("type", "date")
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+    }
+</script>
+
+<script>
+if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+    jQuery(function($){ //on document.ready
+        $('#id_start_date').datepicker();
+        $('#id_end_date').datepicker();
+    })
+}
+</script>
+
 
 <body>
     <div class="wrapper">
@@ -42,12 +64,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/accounts/profile/user/">
+                        <a href="/accounts/profile/user">
                             <i class="material-icons">person</i>
                             <p>User Profile</p>
                         </a>
                     </li>
-                    <li>
+                    <li >
                         <a href="/accounts/profile/table">
                             <i class="material-icons">content_paste</i>
                             <p>Teaching</p>
@@ -59,13 +81,13 @@
                             <p>Publications</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                          <a href="/accounts/profile/education/">
                             <i class="material-icons">bubble_chart</i>
                             <p>Education</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="/accounts/profile/projects/">
                             <i class="material-icons">location_on</i>
                             <p>Projects</p>
@@ -96,7 +118,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"> Icons </a>
+                        <a class="navbar-brand" href="#"> Table List </a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -150,40 +172,40 @@
                     </div>
                 </div>
             </nav>
-             <div class="content">
+            <div class="content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
                             <form  method="POST" enctype="multipart/form-data">
                                 {% csrf_token %}
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Degree</label>
-                                        <input type="text" class="form-control"  name="degree" id="id_degree">
+                                        <label class="control-label">Title of Project</label>
+                                        <input type="text" class="form-control"  name="title" id="id_title">
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 ">
+                                <div class="col-md-12">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Department</label>
-                                        <input type="text" class="form-control"  name="department" id="id_department">
+                                        <label class="control-label">Funding Agency</label>
+                                        <input type="date" class="form-control"  name="sponser" id="id_sponser">
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Institue Name</label>
-                                        <input type="text" class="form-control"  name="institute" id="id_institute">
+                                        <label class="control-label">Duration</label>
+                                        <input type="date" class="form-control"  name="duration" id="id_duration">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Country</label>
-                                        <input type="text" class="form-control"  name="country" id="id_country">
+                                        <label class="control-label">Your Role</label>
+                                        <input type="date" class="form-control"  name="role" id="id_role">
                                     </div>
                                 </div>
-                              <div class="col-md-7">
-                            <button type="submit" class="btn btn-primary pull-right">Add Education</button>
+                              <div class="col-md-3">
+                            <button type="submit" class="btn btn-primary pull-right">Add Project Details</button>
                               </div>
                             </form>
                             <div class="card">
@@ -194,19 +216,21 @@
                                 <div class="card-content table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                            <th>Degree</th>
-                                            <th>Department</th>
-                                            <th>Institute Name</th>
-                                            <th>Country</th>
+                                            <th>S.No</th>
+                                            <th>Tile Of Project</th>
+                                            <th>Funding Agency</th>
+                                            <th>Duration</th>
+                                            <th>Your Role</th>
                                             <th>Delete</th>
                                         </thead>
                                         <tbody>
-                                        {% for u in Education %}
+                                        {% for u in Projects %}
                                             <tr>
-                                                <td>{{u.degree}}</td>
-                                                <td>{{u.department}}</td>
-                                                <td>{{u.institute}}</td>
-                                                <td>{{u.country}}</td>
+                                                <td>{{ forloop.counter }}</td>
+                                                <td>{{u.title}}</td>
+                                                <td>{{u.sponser}}</td>
+                                                <td>{{u.duration}}</td>
+                                                <td>{{u.role}}</td>
                                                 <td><a href="{{url}}delete/{{u.id}}"><i class="fa fa-trash"></i></a></td>
 
                                             </tr>
