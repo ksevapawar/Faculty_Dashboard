@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+{% load static %}
+<html style="" class=" js no-touch csstransitions" lang="en"><head>
+        <title>Faculty-Responsive university staff personal page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <meta name="description" content="A theme for faculty profile page">
+        <meta name="keywords" content="faculty profile, theme,css, html, jquery, transition, transform, 3d, css3">
+
+        <link rel="shortcut icon" href="http://owwwlab.com/favicon.ico">
+
+        <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
+        <!--CSS styles-->
+        <link rel="stylesheet" href="{% static 'sslproject/profile/personal_page_files/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'sslproject/profile/personal_page_files/font-awesome.css' %}">
+        <link rel="stylesheet" href="{% static 'sslproject/profile/personal_page_files/perfect-scrollbar-0.css' %}">
+        <link rel="stylesheet" href="{% static 'sslproject/profile/personal_page_files/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'sslproject/profile/personal_page_files/style.css' %}">
+        <link id="theme-style" rel="stylesheet" href="{% static 'sslproject/profile/personal_page_files/default.css' %}">
+
+
+        <!--/CSS styles-->
+        <!--Javascript files-->
+        <script async="" src="{% static 'sslproject/profile/personal_page_files/analytics.js' %}"></script><script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/jquery-1.js' %}"></script>
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/TweenMax.js' %}"></script>
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/jquery_005.js' %}"></script>
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/jquery_004.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/modernizr.js' %}"></script>
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/jquery_002.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/jquery_003.js' %}"></script>
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/ScrollToPlugin.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/bootstrap.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/jquery.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/masonry.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/perfect-scrollbar-0.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/magnific-popup.js' %}"></script>
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/custom.js' %}"></script>
+
+        <!--/Javascript files-->
+
+
+        <!--Custom Styles for demo only-->
+        <link rel="stylesheet" href="{% static 'sslproject/profile/personal_page_files/custom-style.css' %}">
+        <script type="text/javascript" src="{% static 'sslproject/profile/personal_page_files/custom-style.js' %}"></script>
+        <!--/Custom Styles-->
+
+
+
+    </head>
+    <body class="vsc-initialized">
+
+        <div id="wrapper">
+            <a href="#sidebar" class="mobilemenu"><i class="icon-reorder"></i></a>
+
+            <div id="sidebar">
+                <div id="main-nav" class="ps-container">
+                    <div id="nav-container">
+                        <div id="profile" class="clearfix">
+                            <div class="portrate hidden-xs" style="background-image:url({{user.employee.avatar.url}});"></div>
+                            <div class="title">
+                                <h2>{{user.first_name}} {{user.last_name}}</h2>
+                                <h3>{{user.employee.currentinstitute}}</h3>
+                            </div>
+
+                        </div>
+                        <ul id="navigation">
+                            <li class="">
+                              <a href="#biography">
+                                <div class="icon icon-user"></div>
+                                <div class="text">About Me</div>
+                              </a>
+                            </li>
+
+                            <li class="">
+                              <a href="#research">
+                                <div class="icon icon-book"></div>
+                                <div class="text">Research</div>
+                              </a>
+                            </li>
+
+                            <li class="currentmenu">
+                              <a href="#publications">
+                                <div class="icon icon-edit"></div>
+                                <div class="text">Publications</div>
+                              </a>
+                            </li>
+
+                            <li class="">
+                              <a href="#teaching">
+                                <div class="icon icon-edit"></div>
+                                <div class="text">Teaching</div>
+                              </a>
+                            </li>
+
+                            <li class="">
+                              <a href="#gallery">
+                                <div class="icon icon-picture"></div>
+                                <div class="text">Gallery</div>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#contact">
+                                  <div class="icon icon-calendar"></div>
+                                  <div class="text">Contact &amp; Meet Me</div>
+                              </a>
+                            </li>
+
+                            <li class="external">
+                              <a href="#">
+                                  <div class="icon icon-download-alt"></div>
+                                  <div class="text">Download CV</div>
+                              </a>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: -296px; width: 250px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 299px; right: 3px; height: 306px;"><div class="ps-scrollbar-y" style="top: 152px; height: 154px;"></div></div></div>
+
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="main">
+
+                <div id="biography" class="page home" data-pos="home">
+                    <div class="pageheader">
+                        <div class="headercontent">
+                            <div class="section-container">
+
+                                <div class="row">
+                                    <div class="col-sm-2 visible-sm"></div>
+                                    <div class="col-sm-8 col-md-5">
+                                        <div class="biothumb">
+                                            <img alt="image" src="{{user.employee.avatar.url}}" class="img-responsive">
+                                          <!--   <div class="overlay">
+
+                                                
+                                            </div> -->
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="clearfix visible-sm visible-xs"></div>
+                                    <div class="col-sm-12 col-md-7">
+                                        <h3 class="title">Bio</h3>
+                                        <p>testing {{user.employee.avatar.url}} 
+                                            {% for edu in education %}
+                                            {{edu.degree}}
+                                            {% endfor %}
+                                            <h1 class="">Jennifer Doe</h1>
+                                                <ul class="list-unstyled">
+                                                    <li>Graduate School of Business</li>
+                                                    <li>Knight Management Center</li>
+                                                    <li>Stanford University</li>
+                                                </ul>
+
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagecontents">
+                        <div class="section color-1">
+                            <div class="section-container">
+                                <div class="row">
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <div class="title text-center">
+                                            <h3>Academic Positions</h3>
+                                        </div>
+                                        <ul class="ul-dates">
+                                            <li>
+                                                <div class="dates">
+                                                    <span>Present</span>
+                                                    <span>2005</span>
+                                                </div>
+                                                <div class="content">
+                                                    <h4>General Atlantic Professor</h4>
+                                                    <p><em>Stanford University</em>, Graduate School of Business</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dates">
+                                                    <span>2005</span>
+                                                    <span>2004</span>
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Full Professor</h4>
+                                                    <p><em>Stanford University</em>, Graduate School of Business</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dates">
+                                                    <span>2004</span>
+                                                    <span>2001</span>
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Assistant Professor</h4>
+                                                    <p><em>UCLA</em>, Anderson Graduate School of Management</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dates">
+                                                    <span>2001</span>
+                                                    <span>1999</span>
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Visiting Assistant Professor</h4>
+                                                    <p><em>Columbia University</em>, Graduate School of Business</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="title text-center">
+                                            <h3>Education</h3>
+                                        </div>
+                                        <ul class="ul-card">
+                                            {% for edu in education %}
+                                            <li>
+                                                <div class="dy">
+                                                    <span class="degree">{{edu.degree}}</span>
+                                                    <span class="year">1995</span>
+                                                </div>
+                                                <div class="description">
+                                                    <p class="waht">{{edu.degree}} in {{edu.department}}</p>
+                                                    <p class="where">{{edu.institute}}</p>
+                                                </div>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="section color-2">
+                            <div class="section-container">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="title text-center">
+                                            <h3>Honors, Awards and Grants</h3>
+                                        </div>
+                                        <ul class="timeline">
+
+                                            <li class="open">
+                                                <div class="date">SCP 2014</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject">Distinguished Scientific Achievement Award</div>
+                                                    <div class="text row open" style="display: block;">
+                                                        <div class="col-md-2">
+                                                            <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            Lorem ipsum
+dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
+non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
+quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
+Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
+metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
+auctor ullamcorper.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="date">2012-2013</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject">Ormond Family Faculty Fellow</div>
+                                                    <div class="text row">
+                                                        <div class="col-md-2">
+                                                            <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            Lorem ipsum
+dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
+non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
+quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
+Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
+metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
+auctor ullamcorper.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="date">June 2011</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject">Nautilus Silver Award for Dragonfly Effect</div>
+                                                    <div class="text row">
+                                                        <div class="col-md-2">
+                                                            <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            Lorem ipsum
+dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
+non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
+quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
+Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
+metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
+auctor ullamcorper.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="date">2000 - 2003</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject">Hong Kong Science International Research Grant</div>
+                                                    <div class="text row">
+                                                        <div class="col-md-2">
+                                                            <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            Lorem ipsum
+dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
+non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
+quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
+Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
+metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
+auctor ullamcorper.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="date">1999</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject">Citibank Best Teacher Award (school-wide award, UCLA)</div>
+                                                    <div class="text row">
+                                                        <div class="col-md-2">
+                                                            <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            Lorem ipsum
+dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
+non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
+quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
+Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
+metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
+auctor ullamcorper.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="research" class="page" data-pos="p1" style="z-index: 0; left: 100%;">
+                    <div class="pageheader">
+
+                        <div class="headercontent">
+
+                            <div class="section-container">
+                                <h2 class="title">Research Summary</h2>
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Recent trends in
+deep-submicron very large-scale integration (VLSI) circuit technology
+have resulted in new requirements for algorithms in integrated circuit
+layout. Much of my work centers on new formulations that capture
+performance and density criteria in the physical layout phases of
+computer-aided design (CAD). Our results include near-optimal
+approximation algorithms for such computationally difficult problems as
+minimum-cost Steiner tree routing, low-skew clock networks, cost-radius
+tradeoffs, bounded-density trees, circuit probe testing, high-performing
+ Elmore-based constructions, layout density control, and improved
+manufacturability. </p>
+                                        <p>Lorem ipsum dolor sit amet,
+consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+ et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="subtitle text-center">
+                                            <h3>Interests</h3>
+                                        </div>
+                                        <ul class="ul-boxed list-unstyled">
+                                            <li>Time, Money and Happiness</li>
+                                            <li>The Power of Story</li>
+                                            <li>Building Innovative Brands</li>
+                                            <li>Cultural Psychology</li>
+                                            <li>Emotions, Goals, and Health</li>
+                                            <li>computer-aided design</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagecontents">
+                        <div class="section color-1">
+                            <div class="section-container">
+                                <div class="title text-center">
+                                    <h3>Laboratory Personel</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+
+                                        <div id="labp-heads-wrap">
+
+                                            <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: absolute; top: 0px; right: 0px; bottom: -20px; left: 0px; z-index: auto; width: 490px; height: 250px; margin: 0px; overflow: hidden; cursor: move;"><div id="lab-carousel" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 95px; margin: 0px; z-index: auto; width: 1690px; height: 100px;">
+
+                                                <div style="margin-right: 0px;"><img alt="image" src="{% static 'sslproject/profile/personal_page_files/lab2.jpg' %}" class="img-circle lab-img" style="z-index: 1; width: 100px; height: 100px; margin-top: 50px; margin-right: 0px; margin-left: 0px; opacity: 0.2; display: inline-block;" width="120" height="120"></div>
+                                                <div style="margin-right: 0px;"><img alt="image" src="{% static 'sslproject/profile/personal_page_files/lab1.jpg' %}" class="img-circle lab-img" style="z-index: 2; width: 150px; height: 150px; margin-top: 30px; margin-right: -25px; margin-left: -25px; opacity: 1; display: inline-block;" width="120" height="120"></div>
+                                                <div style="margin-right: 95px;"><img alt="image" src="{% static 'sslproject/profile/personal_page_files/lab4.jpg' %}" class="img-circle lab-img" style="z-index: 1; width: 100px; height: 100px; margin-top: 50px; margin-right: 0px; margin-left: 0px; opacity: 0.2;" width="120" height="120"></div>
+                                                <div style="margin-right: 0px;"><img alt="image" src="{% static 'sslproject/profile/personal_page_files/lab3.jpg' %}" class="img-circle lab-img" style="z-index: 1; width: 100px; height: 100px; margin-top: 50px; margin-right: 0px; margin-left: 0px; opacity: 0.2;" width="120" height="120"></div>
+                                                <div style="margin-right: 0px;"><img alt="image" src="{% static 'sslproject/profile/personal_page_files/lab6.jpg' %}" class="img-circle lab-img" style="z-index: 1; width: 100px; height: 100px; margin-top: 50px; margin-right: 0px; margin-left: 0px; opacity: 0.2;" width="120" height="120"></div>
+                                            <div style="margin-right: 0px;"><img alt="image" src="{% static 'sslproject/profile/personal_page_files/lab5.jpg' %}" class="img-circle lab-img" style="z-index: 1; width: 100px; height: 100px; margin-top: 50px; margin-right: 0px; margin-left: 0px; opacity: 0.2;" width="120" height="120"></div></div></div>
+                                            <div>
+                                                <a href="#" id="prev" style="display: block;" class=""><i class="icon-chevron-sign-left"></i></a>
+                                                <a href="#" id="next" style="display: block;" class=""><i class="icon-chevron-sign-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                        <div id="lab-details">
+                                            <div style="display: none;">
+                                                <h3>David A. Doe</h3>
+                                                <h4>Postdoctoral fellow</h4>
+                                                <a href="#" class="btn btn-info">+ Follow</a>
+                                            </div>
+                                            <div>
+                                                <h3>James Doe</h3>
+                                                <h4>Postdoctoral fellow</h4>
+                                                <a href="#" class="btn btn-info">+ Follow</a>
+                                            </div>
+                                            <div style="display: block;">
+                                                <h3>Nadja Sriram</h3>
+                                                <h4>Postdoctoral fellow</h4>
+                                                <a href="#" class="btn btn-info">+ Follow</a>
+                                            </div>
+                                            <div style="display: none;">
+                                                <h3>Davide Doe</h3>
+                                                <h4>Research Assistant</h4>
+                                                <a href="#" class="btn btn-info">+ Follow</a>
+                                            </div>
+                                            <div style="display: none;">
+                                                <h3>Pauline Doe</h3>
+                                                <h4>Summer Intern</h4>
+                                                <a href="#" class="btn btn-info">+ Follow</a>
+                                            </div>
+                                            <div style="display: none;">
+                                                <h3>James Doe</h3>
+                                                <h4>Postdoctoral fellow</h4>
+                                                <a href="#" class="btn btn-info">+ Follow</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h3>Great lab Personel!</h3>
+                                        <p>Lorem ipsum dolor sit amet,
+consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+ et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section color-2">
+                            <div class="section-container">
+                                <div class="title text-center">
+                                    <h3>Research Projects</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul class="ul-withdetails">
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-3">
+                                                        <div class="image">
+                                                            <img alt="image" src="{% static 'sslproject/profile/personal_page_files/p3.jpg' %}" class="img-responsive">
+                                                            <div class="imageoverlay">
+                                                                <i class="icon icon-search"></i>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-9">
+                                                        <div class="meta">
+                                                            <h3>Title of Preject</h3>
+                                                            <p>Very short description of the project.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details">
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-3">
+                                                        <div class="image">
+                                                            <img alt="image" src="{% static 'sslproject/profile/personal_page_files/p2.jpg' %}" class="img-responsive">
+                                                            <div class="imageoverlay">
+                                                                <i class="icon icon-search"></i>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-9">
+                                                        <div class="meta">
+                                                            <h3>Title of Preject</h3>
+                                                            <p>Very short description of the project.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details">
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-3">
+                                                        <div class="image">
+                                                            <img alt="image" src="{% static 'sslproject/profile/personal_page_files/p4.jpg' %}" class="img-responsive">
+                                                            <div class="imageoverlay">
+                                                                <i class="icon icon-search"></i>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-9">
+                                                        <div class="meta">
+                                                            <h3>Title of Preject</h3>
+                                                            <p>Very short description of the project.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details">
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-3">
+                                                        <div class="image">
+                                                            <img alt="image" src="{% static 'sslproject/profile/personal_page_files/p5.jpg' %}" class="img-responsive">
+                                                            <div class="imageoverlay">
+                                                                <i class="icon icon-search"></i>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-9">
+                                                        <div class="meta">
+                                                            <h3>Title of Preject</h3>
+                                                            <p>Very short description of the project.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details">
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-3">
+                                                        <div class="image">
+                                                            <img alt="image" src="{% static 'sslproject/profile/personal_page_files/p3.jpg' %}" class="img-responsive">
+                                                            <div class="imageoverlay">
+                                                                <i class="icon icon-search"></i>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-9">
+                                                        <div class="meta">
+                                                            <h3>Title of Preject</h3>
+                                                            <p>Very short description of the project.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details">
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-3">
+                                                        <div class="image">
+                                                            <img alt="image" src="{% static 'sslproject/profile/personal_page_files/p2.jpg' %}" class="img-responsive">
+                                                            <div class="imageoverlay">
+                                                                <i class="icon icon-search"></i>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-9">
+                                                        <div class="meta">
+                                                            <h3>Title of Preject</h3>
+                                                            <p>Very short description of the project.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details">
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                    <p>Lorem ipsum dolor
+ sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.</p>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="publications" class="page currentpage" data-pos="p2" style="z-index: 500; left: 15%;">
+                    <div class="page-container">
+                        <div class="pageheader">
+                            <div class="headercontent">
+                                <div class="section-container">
+
+                                    <h2 class="title">Selected Publications</h2>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p>The follwing are the selected publications of prof {{user.first_name}} {{user.last_name}}</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagecontents">
+
+                         
+                            <div class="section color-2" id="pub-grid">
+                                <div class="section-container">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="pitems">
+                                                {% for pub in publications %}                                                                                                                                  
+                                                <div class="item mix cpaper mix_all" style="display: block;  opacity: 1;">
+                                                    <div class="pubmain">
+                                                        <!-- <div class="pubassets">                                                            
+
+                                                        </div> -->
+                                                        
+                                                        <div class="pubtitle" style="overflow-wrap:break-word; "><h4>{{pub.pub}}</h4></div>
+                                                        <div class="pubauthor"><strong>{{user.first_name}} {{user.last_name}}</strong></div>
+                                                        <div class="pubcite"><span class="label label-warning">Conference Papers</span>{{pub.where}}</div>
+
+                                                        </div>
+                                                   
+                                                </div>
+                                                {% endfor %}
+                                               
+                                            </div>
+                                        </div>                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="teaching" class="page" data-pos="p3" style="z-index: 2; left: 0px;" data-order="2">
+                    <div class="pageheader">
+                        <div class="headercontent">
+                            <div class="section-container">
+
+                                <h2 class="title">Teaching</h2>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>The following are the courses taken up by Prof. {{user.first_name}} {{user.last_name}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagecontents">
+                        <div class="section color-1">
+                            <div class="section-container">
+                                <div class="row">
+                                    <div class="title text-center">
+                                        <h3>Currrent Teaching</h3>
+                                    </div>
+                                    <ul class="ul-dates">
+                                        {% for teach in teaching %}
+                                        <li>
+                                            <div class = "col-md-2">
+                                            <div class="dates">
+                                                <span>{{teach.start_date}}</span>
+                                                <span>{{teach.end_date}}</span>
+                                            </div></div>
+                                            <div class = "col-md-10">
+                                            <div class="">
+                                                <h4>{{teach.course}}</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices ac elit sit amet
+porttitor. Suspendisse congue, erat vulputate pharetra mollis, est eros
+fermentum nibh, vitae rhoncus est arcu vitae elit.</p>
+                                            </div></div>
+                                        </li>
+
+                                        {% endfor %}
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+               
+
+                
+                <div id="contact" class="page stellar" data-pos="p1" style="z-index: 0; left: 100%;">
+                    <div class="pageheader">
+                        <div class="headercontent">
+                            <div class="section-container">
+
+                                <h2 class="title">Contact &amp; Meet Me</h2>
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>I would be happy to talk to
+you if you need my assistance in your research or whether you need
+bussiness administration support for your company. Though I have limited
+ time for students but I Lorem ipsum dolor sit amet, consectetur
+adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <strong><i class="icon-phone"></i>&nbsp;&nbsp;</strong>
+                                                <span>office: 808-808 88 88</span>
+                                            </li>
+                                            <li>
+                                                <strong><i class="icon-phone"></i>&nbsp;&nbsp;</strong>
+                                                <span>lab: 808-808 88 88</span>
+                                            </li>
+                                            <li>
+                                                <strong><i class="icon-envelope"></i>&nbsp;&nbsp;</strong>
+                                                <span>jdoe@stanford.edu</span>
+                                            </li>
+                                            <li>
+                                                <strong><i class="icon-envelope"></i>&nbsp;&nbsp;</strong>
+                                                <span>jdoe@gmail.com</span>
+                                            </li>
+                                            <li>
+                                                <strong><i class="icon-skype"></i>&nbsp;&nbsp;</strong>
+                                                <span>jenniferDoe</span>
+                                            </li>
+                                            <li>
+                                                <strong><i class="icon-twitter"></i>&nbsp;&nbsp;</strong>
+                                                <span>#jenniferDoe</span>
+                                            </li>
+                                            <li>
+                                                <strong><i class="icon-linkedin-sign"></i>&nbsp;&nbsp;</strong>
+                                                <span><a href="#">us.linkedin.com/in/jdoe</a></span>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagecontents">
+                        <div class="section contact-office" data-stellar-background-ratio="0.1" style="background-position: 0% -508.05px;">
+                            <div class="section-container">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h2 class="title">At My Office</h2>
+                                        <p>You can find me at my office
+located at Stanford University Lorem ipsum dolor sit amet, consectetur
+adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.</p>
+                                        <p>I am at my office every day from 7:00 until 10:00 am, but you may consider a call to fix an appointment.</p>
+                                    </div>
+                                    <div class="col-md-4 text-center hidden-xs hidden-sm">
+                                        <i class="icon-coffee icon-huge"></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section color-1">
+                            <div class="section-container">
+                                <div class="row">
+                                    <div class="col-md-4 text-center hidden-xs hidden-sm">
+                                        <i class="icon-stethoscope icon-huge"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h2 class="title">At My Work</h2>
+                                        <p>You can find me at my Work
+located at Stanford University Lorem ipsum dolor sit amet, consectetur
+adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.</p>
+                                        <p>I am at my office every day from 7:00 until 10:00 am, but you may consider a call to fix an appointment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section contact-lab" data-stellar-background-ratio="0.1" style="background-position: 0% -1188.9px;">
+                            <div class="section-container">
+                                <div class="row">
+
+                                    <div class="col-md-8">
+                                        <h2 class="title">At My Lab</h2>
+                                        <p>You can find me at my office
+located at Stanford University Lorem ipsum dolor sit amet, consectetur
+adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.</p>
+                                        <p>I am at my office every day from 7:00 until 10:00 am, but you may consider a call to fix an appointment.</p>
+                                    </div>
+                                    <div class="col-md-4 text-center hidden-xs hidden-sm">
+                                        <i class="icon-superscript icon-huge"></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="overlay" style="display: block;"></div>
+
+            </div>
+        </div>
+<script src="{% static 'sslproject/profile/personal_page_files/email-decode.js' %}"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45653136-1', 'owwwlab.com');
+  ga('send', 'pageview');
+
+</script>
+    
+<div class="style-container"><ul class="pre-styles"><li class="default"></li><li class="purple"></li><li class="red"></li><li class="blue"></li><li class="cyan"></li><li class="yellow"></li></ul><div id="demo-custom"><i class="icon-gear icon-spin"></i><h4>Color styles</h4></div></div></body></html>

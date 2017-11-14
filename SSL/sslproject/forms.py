@@ -63,10 +63,12 @@ class Teachingform(forms.ModelForm):
 
 class Publicationform(forms.ModelForm):
     pub = forms.CharField(max_length=300 , help_text='Optional.')
+    where = forms.CharField(max_length=300, help_text='Optional.')
+
 
     class Meta:
         model = Publication
-        fields = ('pub',)
+        fields = ('pub','where')
 
 class Educationform(forms.ModelForm):
     degree = forms.CharField(max_length=300 , help_text='Optional.')

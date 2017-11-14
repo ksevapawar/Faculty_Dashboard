@@ -37,7 +37,7 @@ urlpatterns = [
     url(r'^accounts/profile/education/delete/(?P<part_id>[0-9]+)/$', views.function3, name='delete_view3'),
     url(r'^accounts/profile/projects/delete/(?P<part_id>[0-9]+)/$', views.function4, name='delete_view4'),
     url(r'^accounts/profile/education/$', views.education, name='education'),
-
+    url(r'^profile/(?P<username>.+)/$', views.show_main, name='show'),
 
 ]
 

@@ -18,7 +18,7 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-    <style>td { white-space:pre }</style>
+   <!-- <style>td { white-space:pre }</style>-->
 </head>
 
 <body>
@@ -169,6 +169,12 @@
                                                 <textarea rows="2"   class="form-control"  name="pub" id="id_pub"></textarea>
                                             </div>
                                         </div>
+                                        <div class="col-md-10">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Published Paper</label>
+                                                <textarea rows="1"   class="form-control"  name="where" id="id_where"></textarea>
+                                            </div>
+                                        </div>
                                       <div class="col-md-2" style="text-align: center">
                                     <button type="submit" class="btn btn-primary pull-right">Add Publication</button>
                                         </div>
@@ -183,6 +189,7 @@
                                         <thead class="text-primary">
                                             <th>S.No</th>
                                             <th>Publication Name</th>
+                                            <th>Published Paper</th>
                                             <th>Delete</th>
 
                                         </thead>
@@ -191,6 +198,7 @@
                                             <tr>
                                                 <td>{{ forloop.counter }}</td>
                                                 <td>{{u.pub}}</td>
+                                                <td>{{u.where}}</td>
                                                 <td><a href="{{url}}delete/{{u.id}}"><i class="fa fa-trash"></i></a></td>
                                             </tr>
                                         {% endfor %}

@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.http import HttpResponse
 from django.shortcuts import render
 from sslproject.models import Employee, Teaching, Publication, Education, Projects
 from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform, Publicationform, \
@@ -87,6 +88,7 @@ def publication(request):
             cleaned_data = form.cleaned_data
             p = Publication(user=request.user);
             p.pub  = cleaned_data['pub']
+            p.where = cleaned_data['where']
             p.save()
         return redirect('/accounts/profile/publication/')
 
@@ -146,4 +148,13 @@ def function4(request,part_id =None):
     object = Projects.objects.get(id=part_id)
     object.delete()
     return redirect('/accounts/profile/projects/')
+
+
+def show_main(request,username= None):
+    user=User.objects.get(username=username)
+    teach=Teaching.objects.filter(user=user.id)
+    edu=Education.objects.filter(user=user.id)
+    publication = Publication.objects.filter(user= user.id)
+    return render(request, 'profile/personal_page.html',{'user':user,'teaching':teach,'education':edu,'publications':publication})
+
 

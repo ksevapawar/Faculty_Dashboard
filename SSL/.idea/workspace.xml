@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de6304e8-d119-41bb-af7e-6ea825e71565" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/maps.html" afterPath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/projects.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sslproject/forms.py" afterPath="$PROJECT_DIR$/sslproject/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sslproject/models.py" afterPath="$PROJECT_DIR$/sslproject/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/education.html" afterPath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/education.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/index.html" afterPath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/publication.html" afterPath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/publication.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/teaching.html" afterPath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/teaching.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/user.html" afterPath="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/user.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sslproject/urls.py" afterPath="$PROJECT_DIR$/sslproject/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sslproject/views.py" afterPath="$PROJECT_DIR$/sslproject/views.py" />
     </list>
@@ -28,11 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sslproject/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="60" column="43" lean-forward="false" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+            <state relative-caret-position="255">
+              <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -40,100 +35,123 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/user.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="70" column="39" lean-forward="false" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
-              <folding>
-                <element signature="e#20467#20473#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/projects.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="194" column="52" lean-forward="false" selection-start-line="194" selection-start-column="52" selection-end-line="194" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teaching.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/teaching.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="92" column="39" lean-forward="false" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
-              <folding>
-                <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="education.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/education.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="70" column="39" lean-forward="false" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
-              <folding>
-                <element signature="e#12759#12765#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sslproject/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="37" column="103" lean-forward="false" selection-start-line="37" selection-start-column="103" selection-end-line="37" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publication.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/publication.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sslproject/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+            <state relative-caret-position="225">
+              <caret line="90" column="41" lean-forward="false" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="personal_page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/profile/personal_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="178" column="42" lean-forward="false" selection-start-line="178" selection-start-column="42" selection-end-line="178" selection-end-column="42" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#6329#6334#0" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1510692530950" expanded="true" signature="54129:54151" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="54167:56650" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="54212:54809" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="54264:54782" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="54324:54751" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="54440:54716" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="54500:54677" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="54856:56627" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="54910:56575" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="54970:56544" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="55020:56509" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="55088:55198" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="55256:56470" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="55369:56292" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="55502:55715" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="55850:56240" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="55976:56189" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="56763:56786" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="56787:63616" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="56832:60214" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="56884:60187" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="56944:60156" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="57005:57010" ph="&amp;" />
+                <marker date="1510692530950" expanded="true" signature="57073:60121" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="57132:57863" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="57176:57820" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="57922:60082" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="57989:60038" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="58038:58275" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="58122:58128" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="58128:58134" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="58324:58558" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="58408:58414" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="58414:58420" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="58607:58843" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="58694:58700" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="58700:58706" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="58892:59125" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="58979:58985" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="58985:58991" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="59174:59401" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="59258:59264" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="59264:59270" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="59450:59680" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="59536:59542" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="59542:59548" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="59729:59992" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="59821:59827" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="59827:59833" ph=" " />
+                <marker date="1510692530950" expanded="true" signature="60261:63592" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="60366:60400" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="60401:61391" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="60461:61360" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="60511:61325" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="60570:61073" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="60690:60878" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="61164:61285" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="61445:62435" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="61505:62404" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="61555:62369" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="61646:61772" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="61831:62330" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="61949:62135" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="62537:62571" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="62572:63565" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="62632:63534" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="62682:63499" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="62742:63242" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="62859:63047" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="63333:63459" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="63660:63675" ph="..." />
+                <marker date="1510692530950" expanded="true" signature="63819:64226" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sslproject/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="70" column="32" lean-forward="false" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="publication.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/publication.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2445">
+              <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="48" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,6 +163,7 @@
       <find>dashboard</find>
       <find>icon.html</find>
       <find>table.html</find>
+      <find>img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,16 +182,17 @@
         <option value="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/icons.html" />
         <option value="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/typography.html" />
         <option value="$PROJECT_DIR$/sslproject/admin.py" />
-        <option value="$PROJECT_DIR$/sslproject/forms.py" />
-        <option value="$PROJECT_DIR$/sslproject/urls.py" />
-        <option value="$PROJECT_DIR$/sslproject/views.py" />
         <option value="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/teaching.html" />
-        <option value="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/publication.html" />
         <option value="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/user.html" />
         <option value="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/index.html" />
         <option value="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/education.html" />
         <option value="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/projects.html" />
+        <option value="$PROJECT_DIR$/sslproject/urls.py" />
+        <option value="$PROJECT_DIR$/sslproject/templates/sslproject/profile/personal_page.html" />
         <option value="$PROJECT_DIR$/sslproject/models.py" />
+        <option value="$PROJECT_DIR$/sslproject/views.py" />
+        <option value="$PROJECT_DIR$/sslproject/forms.py" />
+        <option value="$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/publication.html" />
       </list>
     </option>
   </component>
@@ -267,103 +287,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="registration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SSL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SSL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sslproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sslproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SSL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SSL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sslproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sslproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sslproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sslproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sslproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sslproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sslproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sslproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sslproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -565,15 +541,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17300522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22967935" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3191824" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12264151" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2520507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301887" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -585,25 +561,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3191824" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301887" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17300522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2520507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -613,14 +570,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sslproject/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sslproject/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -641,7 +590,7 @@
         <state relative-caret-position="210">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -881,34 +830,8 @@
         <state relative-caret-position="210">
           <caret line="29" column="82" lean-forward="false" selection-start-line="29" selection-start-column="82" selection-end-line="29" selection-end-column="82" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sslproject/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="88" column="52" lean-forward="false" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sslproject/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="37" column="103" lean-forward="false" selection-start-line="37" selection-start-column="103" selection-end-line="37" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sslproject/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -917,25 +840,7 @@
         <state relative-caret-position="285">
           <caret line="70" column="39" lean-forward="false" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
           <folding>
-            <element signature="e#12759#12765#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/publication.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#12759#12765#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -948,13 +853,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/teaching.html">
+    <entry file="file://$PROJECT_DIR$/sslproject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="92" column="39" lean-forward="false" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -966,22 +877,145 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/teaching.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="92" column="39" lean-forward="false" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="70" column="39" lean-forward="false" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+        <state relative-caret-position="155">
+          <caret line="289" column="90" lean-forward="true" selection-start-line="289" selection-start-column="62" selection-end-line="289" selection-end-column="90" />
           <folding>
-            <element signature="e#20467#20473#0" expanded="true" />
+            <element signature="e#20467#20473#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/profile/personal_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="178" column="42" lean-forward="false" selection-start-line="178" selection-start-column="42" selection-end-line="178" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6329#6334#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1510692530950" expanded="true" signature="54129:54151" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="54167:56650" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="54212:54809" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="54264:54782" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="54324:54751" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="54440:54716" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="54500:54677" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="54856:56627" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="54910:56575" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="54970:56544" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="55020:56509" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="55088:55198" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="55256:56470" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="55369:56292" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="55502:55715" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="55850:56240" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="55976:56189" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="56763:56786" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="56787:63616" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="56832:60214" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="56884:60187" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="56944:60156" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="57005:57010" ph="&amp;" />
+            <marker date="1510692530950" expanded="true" signature="57073:60121" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="57132:57863" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="57176:57820" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="57922:60082" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="57989:60038" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="58038:58275" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="58122:58128" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="58128:58134" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="58324:58558" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="58408:58414" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="58414:58420" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="58607:58843" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="58694:58700" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="58700:58706" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="58892:59125" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="58979:58985" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="58985:58991" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="59174:59401" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="59258:59264" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="59264:59270" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="59450:59680" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="59536:59542" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="59542:59548" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="59729:59992" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="59821:59827" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="59827:59833" ph=" " />
+            <marker date="1510692530950" expanded="true" signature="60261:63592" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="60366:60400" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="60401:61391" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="60461:61360" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="60511:61325" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="60570:61073" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="60690:60878" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="61164:61285" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="61445:62435" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="61505:62404" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="61555:62369" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="61646:61772" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="61831:62330" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="61949:62135" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="62537:62571" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="62572:63565" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="62632:63534" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="62682:63499" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="62742:63242" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="62859:63047" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="63333:63459" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="63660:63675" ph="..." />
+            <marker date="1510692530950" expanded="true" signature="63819:64226" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sslproject/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="90" column="41" lean-forward="false" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sslproject/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="70" column="32" lean-forward="false" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sslproject/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="60" column="43" lean-forward="false" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+        <state relative-caret-position="255">
+          <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sslproject/templates/sslproject/dashboard/publication.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2445">
+          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
