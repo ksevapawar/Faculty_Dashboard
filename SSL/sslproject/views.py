@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from sslproject.models import Employee, Teaching
-from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform
+from sslproject.models import Employee, Teaching, Publication
+from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform, Publicationform
 # Create your views here.
 
 from django.contrib.auth import login, authenticate
@@ -79,3 +79,26 @@ def teaching(request):
     else :
         return render(request,'dashboard/table.html',{'Teaching':Teaching.objects.filter(user=request.user.id)})
 
+def publication(request):
+    if request.method == 'POST':
+        form = Publicationform(request.POST)
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            p = Publication(user=request.user);
+            p.pub  = cleaned_data['pub']
+            p.save()
+        return redirect('/accounts/profile/publication/')
+
+    else:
+        return render(request, 'dashboard/typography.html', {'Publication': Publication.objects.filter(user=request.user.id)})
+
+def function(request,part_id =None):
+    object = Teaching.objects.get(id=part_id)
+    object.delete()
+    return redirect('/accounts/profile/table/')
+   # return render(request,'/accounts/profile/table/'
+
+def function2(request,part_id =None):
+    object = Publication.objects.get(id=part_id)
+    object.delete()
+    return redirect('/accounts/profile/publication/')

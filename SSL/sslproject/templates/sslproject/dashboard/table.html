@@ -76,7 +76,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                         </a>
                     </li>
                     <li>
-                        <a href="./typography.html">
+                        <a href="/accounts/profile/publication/">
                             <i class="material-icons">library_books</i>
                             <p>Typography</p>
                         </a>
@@ -213,7 +213,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                                             <th>Course</th>
                                             <th>Start Date</th>
                                             <th>End Date</th>
-                                            <th>Salary</th>
+                                            <th>Delete</th>
                                         </thead>
                                         <tbody>
                                         {% for u in Teaching %}
@@ -221,6 +221,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                                                 <td>{{u.course}}</td>
                                                 <td>{{u.start_date}}</td>
                                                 <td>{{u.end_date}}</td>
+                                                <td><a href="{{url}}delete/{{u.id}}"><i class="fa fa-trash"></i></a></td>
 
                                             </tr>
                                         {% endfor %}
@@ -230,69 +231,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="card card-plain">
-                                <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">Table on Plain Background</h4>
-                                    <p class="category">Here is a subtitle for this table</p>
-                                </div>
-                                <div class="card-content table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Salary</th>
-                                            <th>Country</th>
-                                            <th>City</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Dakota Rice</td>
-                                                <td>$36,738</td>
-                                                <td>Niger</td>
-                                                <td>Oud-Turnhout</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Minerva Hooper</td>
-                                                <td>$23,789</td>
-                                                <td>Curaçao</td>
-                                                <td>Sinaai-Waas</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Sage Rodriguez</td>
-                                                <td>$56,142</td>
-                                                <td>Netherlands</td>
-                                                <td>Baileux</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Philip Chaney</td>
-                                                <td>$38,735</td>
-                                                <td>Korea, South</td>
-                                                <td>Overland Park</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Doris Greene</td>
-                                                <td>$63,542</td>
-                                                <td>Malawi</td>
-                                                <td>Feldkirchen in Kärnten</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Mason Porter</td>
-                                                <td>$78,615</td>
-                                                <td>Chile</td>
-                                                <td>Gloucester</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

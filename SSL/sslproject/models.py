@@ -34,5 +34,12 @@ class Teaching(models.Model):
     start_date =  models.DateField(default=datetime.date.today)
     end_date = models.DateField(default=datetime.date.today)
 
+class Publication(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='publication')
+    pub = models.CharField(max_length=300)
+
+
+
+
 
 post_save.connect(create_user_profile, sender=User)

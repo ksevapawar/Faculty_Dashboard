@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 
-from sslproject.models import Employee, Teaching
+from sslproject.models import Employee, Teaching, Publication
+
 
 class TeachingInline(admin.StackedInline):
     model = Teaching
@@ -23,3 +24,4 @@ class UserAdmin(BaseUserAdmin):
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
 admin.site.register(Teaching)
+admin.site.register(Publication)
