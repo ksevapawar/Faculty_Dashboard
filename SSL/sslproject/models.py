@@ -4,8 +4,9 @@ from django.db.models.signals import post_save
 
 
 class Employee(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE , related_name='employee')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='employee')
     department = models.CharField(max_length=100)
+    avatar = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
 
     class Meta:
         verbose_name_plural = "User Profiles"

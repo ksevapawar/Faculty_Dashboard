@@ -33,7 +33,7 @@ class EditProfileForm(forms.ModelForm):
 class EditProfileForm2(forms.ModelForm):
 
     department = forms.CharField(max_length=30 , help_text='Optional.')
-
+    avatar = forms.ImageField()
     class Meta:
         model = Employee
-        fields = ('department',)
+        fields = ('department','avatar')

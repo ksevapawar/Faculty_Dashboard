@@ -160,7 +160,7 @@
                                     <p class="category">Complete your profile</p>
                                 </div>
                                 <div class="card-content">
-                                    <form  method="POST">
+                                    <form  method="POST" enctype="multipart/form-data">
                                         {%csrf_token%}
                                         <div class="row">
                                             <div class="col-md-5">
@@ -237,7 +237,7 @@
                                         <!--</div>-->
                                         <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
                                         <div class="clearfix"></div>
-                                    </form>
+
                                 </div>
                             </div>
                         </div>
@@ -245,7 +245,7 @@
                             <div class="card card-profile">
                                 <div class="card-avatar">
                                     <a href="#pablo">
-                                        <img class="img" src="{%static 'sslproject/assets/img/faces/marc.jpg' %}" />
+                                        <img class="img" src="{{user.employee.avatar.url}}" />
                                     </a>
                                 </div>
                                 <div class="content">
@@ -254,6 +254,11 @@
                                     <p class="card-content">
                                         Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
                                     </p>
+                                    
+    									
+    								<input class="btn btn-primary btn-round" type="file"  name="avatar" id="id_avatar">			
+  									</form>
+
                                     <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
                                 </div>
                             </div>
