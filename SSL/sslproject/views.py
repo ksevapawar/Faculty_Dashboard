@@ -192,9 +192,10 @@ def find_user_by_name(request):
             qs = User.objects.all()
             for term in query_name.split():
                 qs = qs.filter( Q(first_name__icontains = term) | Q(last_name__icontains = term))
-            return HttpResponse(qs)
+
+            return render(request,'main/search.html',{'results':qs  })
         else:
-            return HttpResponse('hello')
+            return render(request,'main/search.html')
     else:
         return render(request,'main/search.html')
 

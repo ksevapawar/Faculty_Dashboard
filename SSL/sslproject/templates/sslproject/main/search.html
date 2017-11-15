@@ -7,6 +7,11 @@
 
 </style>
 
+<script type='text/javascript'>
+$(function() {
+    $(document).scrollTop($("#results").offset().top);  
+});
+</script>
 
 
   <meta charset="utf-8">
@@ -43,12 +48,20 @@
   ga('create', 'UA-78930914-1', 'auto');
   ga('send', 'pageview');
 
+
 </script>
+    <script type='text/javascript'>
+if (!document.location.hash){
+    document.location.hash = 'results';
+}
+</script>
+
+    
 <script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/common.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/map.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/util.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/marker.js' %}"></script><style type="text/css">.gm-style {
         font: 400 11px Roboto, Arial, sans-serif;
         text-decoration: none;
       }
-      .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/onion.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/controls.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/stats.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/overlay.js' %}"></script><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps-api-v3/api/js/30/13/common.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps-api-v3/api/js/30/13/util.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps-api-v3/api/js/30/13/stats.js"></script></head>
+      .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/onion.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/controls.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/stats.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/overlay.js' %}"></script></head>
 <body onload="initialize()" class="promo" style="">
 
 
@@ -89,37 +102,24 @@
 
                 </div>
             </form>
-            <div class="col-md-12">
-                    <ul>
-                     <li>
-                     <img src="http://lorempixum.com/100/100/nature/1" >
-                     <h3>The Grasslands</h3>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-                    </li>
-
-    <li>
-      <img src="http://lorempixum.com/100/100/nature/2" >
-      <h3>Paradise Found</h3>
+        </div>
+   
+    </div></div>
+      
+       <div class="fea_block container-fluid" id="results">
+    <ul  style="list-style-type: none;">
+    {% for item in results %}
+      <li>
+      <img style="max-width: 100px; max-height: 100px; float: left; margin: 0 15px 0 0;" src=" {{item.employee.avatar.url}}" >
+      <h3><a href="/profile/{{item.username}}">{{item.first_name}} {{item.last_name}}</a></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
+    <br><br>
+    {% endfor %}
+    
 
-    <li>
-      <img src="http://lorempixum.com/100/100/nature/3" >
-      <h3>Smoke On The Water</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-
-    <li>
-      <img src="http://lorempixum.com/100/100/nature/4" >
-      <h3>Headline</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-  </ul>
-</div></div>
-          </div>
-
-    </div>
-      </div>
+   
+  </ul></div>
 
   <!--     <div class="scroll_block">
         <img src="{% static 'sslproject/main/Main_files/scroll.png' %}" class="animated infinite bounce" alt="#">
@@ -175,9 +175,7 @@
 <script src="{% static 'sslproject/main/Main_files/all_scr.js' %}"></script>
 <!--Bootstrap js-->  
 <script src="{% static 'sslproject/main/Main_files/bootstrap.js' %}"></script>
-<!--Map js-->
-<script type="text/javascript" src="{% static 'sslproject/main/Main_files/map_index.js' %}"></script>
-<script type="text/javascript" src="{% static 'sslproject/main/Main_files/infobox.js' %}"></script>
+
 <!--Slider Revolution-->
 <script type="text/javascript" src="{% static 'sslproject/main/Main_files/jquery_002.js' %}"></script>
 <script type="text/javascript" src="{% static 'sslproject/main/Main_files/jquery_003.js' %}"></script>
