@@ -40,8 +40,8 @@ urlpatterns = [
     url(r'^accounts/profile/projects/delete/(?P<part_id>[0-9]+)/$', views.function4, name='delete_view4'),
     url(r'^accounts/profile/achievements/delete/(?P<part_id>[0-9]+)/$', views.function5, name='delete_view5'),
 
-
     url(r'^profile/(?P<username>.+)/$', views.show_main, name='show'),
+    url(r'^search/$', views.find_user_by_name, name='search1'),
 
 ]
 

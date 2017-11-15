@@ -1,9 +1,10 @@
 from django.contrib.auth.models import User
+from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render
 from sslproject.models import Employee, Teaching, Publication, Education, Projects, Achievements
 from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform, Publicationform, \
-    Educationform, Projectsform, Achievementsform
+    Educationform, Projectsform, Achievementsform, SearchForm
 # Create your views here.
 
 from django.contrib.auth import login, authenticate
@@ -182,4 +183,18 @@ def show_main(request,username= None):
     achievements = Achievements.objects.filter(user=user.id)
     return render(request, 'profile/personal_page.html',{'user':user,'teaching':teach,'education':edu,'publications':publication,'achievements':achievements,})
 
+def find_user_by_name(request):
+    form = SearchForm(request.POST)
+    if request.method == 'POST':
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            query_name = cleaned_data['query']
+            qs = User.objects.all()
+            for term in query_name.split():
+                qs = qs.filter( Q(first_name__icontains = term) | Q(last_name__icontains = term))
+            return HttpResponse(qs)
+        else:
+            return HttpResponse('hello')
+    else:
+        return render(request,'main/search.html')
 

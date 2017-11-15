@@ -99,3 +99,8 @@ class Achievementsform(forms.ModelForm):
     class Meta:
         model = Achievements
         fields = ('year','ach','details')
+
+class SearchForm(forms.Form):
+    query = forms.CharField(max_length=300 , help_text='Optional.')
+    class Meta:
+        fields = ('query',)
