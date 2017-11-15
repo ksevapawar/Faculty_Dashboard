@@ -1,9 +1,9 @@
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render
-from sslproject.models import Employee, Teaching, Publication, Education, Projects
+from sslproject.models import Employee, Teaching, Publication, Education, Projects, Achievements
 from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform, Publicationform, \
-    Educationform, Projectsform
+    Educationform, Projectsform, Achievementsform
 # Create your views here.
 
 from django.contrib.auth import login, authenticate
@@ -128,6 +128,25 @@ def projects(request):
         return render(request, 'dashboard/projects.html', {'Projects': Projects.objects.filter(user=request.user.id)})
 
 
+
+
+
+def achievements(request):
+    if request.method == 'POST':
+        form = Achievementsform(request.POST)
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            a = Achievements(user=request.user);
+            a.year  = cleaned_data['year']
+            a.ach = cleaned_data['ach']
+            a.details = cleaned_data['details']
+            a.save()
+        return redirect('/accounts/profile/achievements/')
+
+    else:
+        return render(request, 'dashboard/achievements.html', {'Achievements': Achievements.objects.filter(user=request.user.id)})
+
+
 def function(request,part_id =None):
     object = Teaching.objects.get(id=part_id)
     object.delete()
@@ -149,12 +168,18 @@ def function4(request,part_id =None):
     object.delete()
     return redirect('/accounts/profile/projects/')
 
+def function5(request,part_id =None):
+    object = Achievements.objects.get(id=part_id)
+    object.delete()
+    return redirect('/accounts/profile/achievements/')
+
 
 def show_main(request,username= None):
     user=User.objects.get(username=username)
     teach=Teaching.objects.filter(user=user.id)
     edu=Education.objects.filter(user=user.id)
     publication = Publication.objects.filter(user= user.id)
-    return render(request, 'profile/personal_page.html',{'user':user,'teaching':teach,'education':edu,'publications':publication})
+    achievements = Achievements.objects.filter(user=user.id)
+    return render(request, 'profile/personal_page.html',{'user':user,'teaching':teach,'education':edu,'publications':publication,'achievements':achievements,})
 
 

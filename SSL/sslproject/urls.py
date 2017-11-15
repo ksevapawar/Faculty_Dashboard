@@ -31,12 +31,16 @@ urlpatterns = [
     url(r'^accounts/profile/table/$', views.teaching, name='table'),
     url(r'^accounts/profile/publication/$', views.publication, name='publication'),
     url(r'^accounts/profile/projects/$', views.projects, name='projects'),
+    url(r'^accounts/profile/achievements/$', views.achievements, name='achievements'),
+    url(r'^accounts/profile/education/$', views.education, name='education'),
     url(r'^signup/$', views.signup, name='editprofile'),
     url(r'^accounts/profile/table/delete/(?P<part_id>[0-9]+)/$', views.function, name='delete_view'),
     url(r'^accounts/profile/publication/delete/(?P<part_id>[0-9]+)/$', views.function2, name='delete_view2'),
     url(r'^accounts/profile/education/delete/(?P<part_id>[0-9]+)/$', views.function3, name='delete_view3'),
     url(r'^accounts/profile/projects/delete/(?P<part_id>[0-9]+)/$', views.function4, name='delete_view4'),
-    url(r'^accounts/profile/education/$', views.education, name='education'),
+    url(r'^accounts/profile/achievements/delete/(?P<part_id>[0-9]+)/$', views.function5, name='delete_view5'),
+
+
     url(r'^profile/(?P<username>.+)/$', views.show_main, name='show'),
 
 ]

@@ -1,46 +1,25 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
 {% load static %}
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'sslproject/assets/img/apple-icon.png' %}" />
-    <link rel="icon" type="image/png" href="{% static 'sslproject/assets/img/favicon.png' %}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{%static 'sslproject/assets/img/apple-icon.png' %}" />
+    <link rel="icon" type="image/png" href="{%static 'sslproject/assets/img/favicon.png' %}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Material Dashboard by Creative Tim</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <!-- Bootstrap core CSS     -->
-    <link href="{% static 'sslproject/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{%static 'sslproject/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
     <link href="{% static 'sslproject/assets/css/material-dashboard.css' %}" rel="stylesheet" />
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="{% static 'sslproject/assets/css/demo.css' %}" rel="stylesheet" />
+    <link href="{%static 'sslproject/assets/css/demo.css' %}" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+   <!-- <style>td { white-space:pre }</style>-->
 </head>
-
-
-
-<script type="text/javascript">
-    var datefield=document.createElement("input")
-    datefield.setAttribute("type", "date")
-    if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
-        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
-        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
-        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n') 
-    }
-</script>
- 
-<script>
-if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
-    jQuery(function($){ //on document.ready
-        $('#id_start_date').datepicker();
-        $('#id_end_date').datepicker();
-    })
-}
-</script>
-
 
 <body>
     <div class="wrapper">
@@ -58,24 +37,24 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li>
-                        <a href="/accounts/profile/">
+                         <a href="/accounts/profile/">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/accounts/profile/user">
+                        <a href="/accounts/profile/user/">
                             <i class="material-icons">person</i>
                             <p>User Profile</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li >
                         <a href="/accounts/profile/table">
                             <i class="material-icons">content_paste</i>
                             <p>Teaching</p>
                         </a>
                     </li>
-                    <li>
+                    <li >
                         <a href="/accounts/profile/publication/">
                             <i class="material-icons">library_books</i>
                             <p>Publications</p>
@@ -93,7 +72,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                             <p>Projects</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="/accounts/profile/achievements/">
                             <i class="material-icons text-gray">notifications</i>
                             <p>Achievements</p>
@@ -118,7 +97,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"> Teachings </a>
+                        <a class="navbar-brand" href="#"> Achievements </a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -175,59 +154,58 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="card">
-                                <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">Enter Teaching Details</h4>
-                                    <p class="category"></p>
-                                </div>
-                        <div class="col-md-12">
-                            <form  method="POST" enctype="multipart/form-data">
-                                {% csrf_token %}
-                                <div class="col-md-10">
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">Name of the course</label>
-                                        <input type="text" class="form-control"  name="course" id="id_course">
-                                    </div>
-                                </div>
 
-                                <div class="col-md-5">
-                                    <div class="form-group ">
-                                        <label class="control-label">Starting Semester</label>
-                                        <input type="date" class="form-control"  name="start_date" id="id_start_date">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label class="control-label">Ending Semester</label>
-                                        <input type="date" class="form-control"  name="end_date" id="id_end_date">
-                                    </div>
-                                </div>
-                              <div class="col-md-2" style="text-align: center">
-                            <button type="submit" class="btn btn-primary pull-right">Add Course</button>
-                              </div>
-                            </form>
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">Teachings of {{user.username}} </h4>
+                                    <h4 class="title">Enter Achievements Detail</h4>
+                                    <p class="category"></p>
+                                </div>
+                                <div class="col-md-12">
+                                 <form  method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="col-md-10">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Awards and Honors</label>
+                                                <input type="text"   class="form-control"  name="ach" id="id_ach">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Year</label>
+                                                <input type="text"   class="form-control"  name="year" id="id_year">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">More details (Optional)</label>
+                                                 <textarea rows="2"   class="form-control"  name="details" id="id_details"></textarea>
+                                            </div>
+                                        </div>
+                                      <div class="col-md-7" style="text-align: center">
+                                    <button type="submit" class="btn btn-primary pull-right">Add Achievements</button>
+                                        </div>
+                                 </form>
+                                 <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">Awards and Honors of {{user.username}} </h4>
                                     <p class="category">Here is a subtitle for this table</p>
                                 </div>
                                 <div class="card-content table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                            <th>Course</th>
-                                            <th>Start Date</th>
-                                            <th>End Date</th>
+                                            <th>S.No</th>
+                                            <th>Year</th>
+                                            <th>Awards and Honors</th>
                                             <th>Delete</th>
+
                                         </thead>
                                         <tbody>
-                                        {% for u in Teaching %}
+                                        {% for u in Achievements %}
                                             <tr>
-                                                <td>{{u.course}}</td>
-                                                <td>{{u.start_date}}</td>
-                                                <td>{{u.end_date}}</td>
+                                                <td>{{ forloop.counter }}</td>
+                                                <td>{{u.year}}</td>
+                                                <td>{{u.ach}}</td>
                                                 <td><a href="{{url}}delete/{{u.id}}"><i class="fa fa-trash"></i></a></td>
-
                                             </tr>
                                         {% endfor %}
 
@@ -235,7 +213,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                                     </table>
                                 </div>
                             </div>
-                        </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -267,112 +267,26 @@
                                             <h3>Honors, Awards and Grants</h3>
                                         </div>
                                         <ul class="timeline">
-
+                                            {% for achv in achievements %}
                                             <li class="open">
-                                                <div class="date">SCP 2014</div>
+                                                <div class="date">{{achv.year}}</div>
                                                 <div class="circle"></div>
                                                 <div class="data">
-                                                    <div class="subject">Distinguished Scientific Achievement Award</div>
+                                                    <div class="subject">{{achv.ach}}</div>
                                                     <div class="text row open" style="display: block;">
                                                         <div class="col-md-2">
                                                             <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
                                                         </div>
                                                         <div class="col-md-10">
-                                                            Lorem ipsum
-dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
-non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
-quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
-Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
-metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
-auctor ullamcorper.
+                                                            {{achv.details}}
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <div class="date">2012-2013</div>
-                                                <div class="circle"></div>
-                                                <div class="data">
-                                                    <div class="subject">Ormond Family Faculty Fellow</div>
-                                                    <div class="text row">
-                                                        <div class="col-md-2">
-                                                            <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            Lorem ipsum
-dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
-non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
-quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
-Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
-metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
-auctor ullamcorper.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="date">June 2011</div>
-                                                <div class="circle"></div>
-                                                <div class="data">
-                                                    <div class="subject">Nautilus Silver Award for Dragonfly Effect</div>
-                                                    <div class="text row">
-                                                        <div class="col-md-2">
-                                                            <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            Lorem ipsum
-dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
-non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
-quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
-Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
-metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
-auctor ullamcorper.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="date">2000 - 2003</div>
-                                                <div class="circle"></div>
-                                                <div class="data">
-                                                    <div class="subject">Hong Kong Science International Research Grant</div>
-                                                    <div class="text row">
-                                                        <div class="col-md-2">
-                                                            <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            Lorem ipsum
-dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
-non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
-quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
-Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
-metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
-auctor ullamcorper.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="date">1999</div>
-                                                <div class="circle"></div>
-                                                <div class="data">
-                                                    <div class="subject">Citibank Best Teacher Award (school-wide award, UCLA)</div>
-                                                    <div class="text row">
-                                                        <div class="col-md-2">
-                                                            <img alt="image" class="thumbnail img-responsive" src="{% static 'sslproject/profile/personal_page_files/Nobel_Prize.png' %}">
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            Lorem ipsum
-dolor sit amet, consectetur adipiscing elit. Sed egestas dapibus lectus
-non dignissim. Pellentesque auctor ornare urna, volutpat condimentum
-quam porttitor at. Vestibulum tincidunt diam in eros aliquam luctus.
-Donec sagittis a purus a porttitor. Sed non feugiat enim. Donec eget
-metus erat. Vivamus sed consequat orci. Aenean commodo lectus sed purus
-auctor ullamcorper.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            {% endfor %}                                    
+                                           
+                                            
+                                            
 
                                         </ul>
                                     </div>

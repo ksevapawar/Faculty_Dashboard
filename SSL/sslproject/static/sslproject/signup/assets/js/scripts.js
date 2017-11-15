@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
     /*
         Fullscreen background
     */    
-    $.backstretch("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-2.jpg");
+    $.backstretch("http://www.iitg.ernet.in/stud/gymkhana/images/slideshow1.jpg");
     
     $('#top-navbar-1').on('shown.bs.collapse', function(){
     	$.backstretch("resize");

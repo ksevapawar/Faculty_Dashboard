@@ -94,9 +94,9 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                         </a>
                     </li>
                     <li>
-                        <a href="./notifications.html">
+                        <a href="/accounts/profile/achievements/">
                             <i class="material-icons text-gray">notifications</i>
-                            <p>Notifications</p>
+                            <p>Achievements</p>
                         </a>
                     </li>
                     <li class="active-pro">
@@ -118,7 +118,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"> Table List </a>
+                        <a class="navbar-brand" href="#"> Projects </a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -175,6 +175,11 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
+                            <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">Enter Projects Details</h4>
+                                    <p class="category"></p>
+                                </div>
                         <div class="col-md-12">
                             <form  method="POST" enctype="multipart/form-data">
                                 {% csrf_token %}
@@ -210,8 +215,8 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                             </form>
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">Teachings of {{user.username}} </h4>
-                                    <p class="category">Here is a subtitle for this table</p>
+                                    <h4 class="title">Projects of {{user.username}} </h4>
+                                    <p class="category"></p>
                                 </div>
                                 <div class="card-content table-responsive">
                                     <table class="table">
@@ -241,7 +246,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                                 </div>
                             </div>
                         </div>
-
+                            </div>
                     </div>
                 </div>
             </div>
