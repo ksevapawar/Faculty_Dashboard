@@ -74,11 +74,12 @@ class Educationform(forms.ModelForm):
     degree = forms.CharField(max_length=300 , help_text='Optional.')
     department = forms.CharField(max_length=300 , help_text='Optional.')
     institute = forms.CharField(max_length=300 , help_text='Optional.')
+    year = forms.CharField(max_length=300, help_text='Optional.')
     country = forms.CharField(max_length=300 , help_text='Optional.')
 
     class Meta:
         model = Education
-        fields = ('degree','department','institute','country')
+        fields = ('degree','department','institute','year','country')
 
 class Projectsform(forms.ModelForm):
     title = forms.CharField(max_length=300 , help_text='Optional.')
@@ -104,3 +105,8 @@ class SearchForm(forms.Form):
     query = forms.CharField(max_length=300 , help_text='Optional.')
     class Meta:
         fields = ('query',)
+
+class WebsiteForm(forms.Form):
+    website = forms.CharField(max_length=300 , help_text='Optional.')
+    class Meta:
+        fields = ('website',)

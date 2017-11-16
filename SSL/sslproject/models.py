@@ -31,8 +31,8 @@ def create_user_profile(sender, instance, created, **kwargs):
 class Teaching(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE,related_name='teaching')
     course = models.CharField(max_length=100)
-    start_date =  models.DateField(default=datetime.date.today)
-    end_date = models.DateField(default=datetime.date.today)
+    start_date =  models.CharField(max_length=100,default=' ')
+    end_date = models.CharField(max_length=100,default=' ')
 
     def __str__(self):
         return self.user.username
@@ -52,6 +52,7 @@ class Education(models.Model):
     department = models.CharField(max_length=100)
     institute = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
+    year = models.CharField(max_length=100)
 
     def __str__(self):
         return self.user.username

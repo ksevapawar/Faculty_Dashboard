@@ -1,10 +1,15 @@
+import re
+import urllib
+
 from django.contrib.auth.models import User
 from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render
+
+from sslproject.Crawler.Awards import *
 from sslproject.models import Employee, Teaching, Publication, Education, Projects, Achievements
 from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform, Publicationform, \
-    Educationform, Projectsform, Achievementsform, SearchForm
+    Educationform, Projectsform, Achievementsform, SearchForm, WebsiteForm
 # Create your views here.
 
 from django.contrib.auth import login, authenticate
@@ -12,13 +17,32 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
+from bs4 import BeautifulSoup
+import urllib.request
 
 @login_required(login_url='/login')
 def index(request):
-    return render(request, 'dashboard/index.html')
+    if request.method == 'POST':
+        form = WebsiteForm(request.POST)
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            website = cleaned_data['website']
+            page = urllib.request.urlopen(website).read()
+            html = BeautifulSoup(str(page), "lxml")
+            #achieve(request, html)
+            #pjt(request,html)
+            #publ(request,html)
+            #teach(request,html)
+            #meta_data(request,html)
+            educate(request,html)
+
+        return redirect('/accounts/profile/')
+
+    else:
+        return render(request, 'dashboard/index.html')
 
 def user_table(request):
-    return render(request, 'dashboard/teaching.html')
+       return render(request, 'dashboard/teaching.html')
 
 def signup(request):
     if request.method == 'POST':
@@ -105,6 +129,7 @@ def education(request):
             edu.degree  = cleaned_data['degree']
             edu.department = cleaned_data['department']
             edu.institute = cleaned_data['institute']
+            edu.year = cleaned_data['year']
             edu.country = cleaned_data['country']
             edu.save()
         return redirect('/accounts/profile/education/')

@@ -72,9 +72,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./notifications.html">
+                        <a href="/accounts/profile/achievements/">
                             <i class="material-icons text-gray">notifications</i>
-                            <p>Notifications</p>
+                            <p>Achievements</p>
                         </a>
                     </li>
                     <li class="active-pro">
@@ -161,10 +161,11 @@
                         <div class="col-md-12">
                             <form  method="POST" enctype="multipart/form-data">
                                 {% csrf_token %}
+
                                 <div class="col-md-6">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Degree</label>
-                                        <input type="text" class="form-control"  name="degree" id="id_degree">
+                                        <label class="control-label">Institue Name</label>
+                                        <input type="text" class="form-control"  name="institute" id="id_institute">
                                     </div>
                                 </div>
 
@@ -175,13 +176,19 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Institue Name</label>
-                                        <input type="text" class="form-control"  name="institute" id="id_institute">
+                                        <label class="control-label">Degree</label>
+                                        <input type="text" class="form-control"  name="degree" id="id_degree">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Year</label>
+                                        <input type="text" class="form-control"  name="year" id="id_year">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
                                     <div class="form-group label-floating">
                                         <label class="control-label">Country</label>
                                         <input type="text" class="form-control"  name="country" id="id_country">
@@ -199,18 +206,22 @@
                                 <div class="card-content table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
+                                            <th>S.No.</th>
                                             <th>Degree</th>
                                             <th>Department</th>
                                             <th>Institute Name</th>
+                                            <th>Year</th>
                                             <th>Country</th>
                                             <th>Delete</th>
                                         </thead>
                                         <tbody>
                                         {% for u in Education %}
                                             <tr>
+                                                <td>{{ forloop.counter }}</td>
                                                 <td>{{u.degree}}</td>
                                                 <td>{{u.department}}</td>
                                                 <td>{{u.institute}}</td>
+                                                <td>{{u.year}}</td>
                                                 <td>{{u.country}}</td>
                                                 <td><a href="{{url}}delete/{{u.id}}"><i class="fa fa-trash"></i></a></td>
 

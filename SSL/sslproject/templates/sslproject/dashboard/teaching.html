@@ -22,7 +22,7 @@
 
 
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
     var datefield=document.createElement("input")
     datefield.setAttribute("type", "date")
     if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
@@ -39,7 +39,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
         $('#id_end_date').datepicker();
     })
 }
-</script>
+</script>-->
 
 
 <body>
@@ -191,16 +191,16 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                                 </div>
 
                                 <div class="col-md-5">
-                                    <div class="form-group ">
+                                    <div class="form-group label-floating">
                                         <label class="control-label">Starting Semester</label>
-                                        <input type="date" class="form-control"  name="start_date" id="id_start_date">
+                                        <input type="text" class="form-control"  name="start_date" id="id_start_date">
                                     </div>
                                 </div>
 
                                 <div class="col-md-5">
-                                    <div class="form-group">
+                                    <div class="form-group label-floating">
                                         <label class="control-label">Ending Semester</label>
-                                        <input type="date" class="form-control"  name="end_date" id="id_end_date">
+                                        <input type="text" class="form-control"  name="end_date" id="id_end_date">
                                     </div>
                                 </div>
                               <div class="col-md-2" style="text-align: center">
@@ -215,6 +215,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                                 <div class="card-content table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
+                                            <th>S.No.</th>
                                             <th>Course</th>
                                             <th>Start Date</th>
                                             <th>End Date</th>
@@ -223,6 +224,7 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                                         <tbody>
                                         {% for u in Teaching %}
                                             <tr>
+                                                <td>{{ forloop.counter }}</td>
                                                 <td>{{u.course}}</td>
                                                 <td>{{u.start_date}}</td>
                                                 <td>{{u.end_date}}</td>
