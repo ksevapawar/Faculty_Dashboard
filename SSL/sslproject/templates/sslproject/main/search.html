@@ -48,13 +48,14 @@ $(function() {
   ga('create', 'UA-78930914-1', 'auto');
   ga('send', 'pageview');
 
-
+{% if results %}
 </script>
     <script type='text/javascript'>
 if (!document.location.hash){
     document.location.hash = 'results';
 }
 </script>
+    {% endif %}
 
     
 <script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/common.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/map.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/util.js' %}"></script><script type="text/javascript" charset="UTF-8" src="{% static 'sslproject/main/Main_files/marker.js' %}"></script><style type="text/css">.gm-style {

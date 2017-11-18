@@ -95,17 +95,18 @@ def educate(request,html):
     for city in html.find_all('div', {'class': 'fh5co-content-inner text-center'}):
         for item in city('div', {'class': 'fh5co-icon'}):
             for j in item('p'):
-                arr = " ".join(re.findall(r'(.+)?\\n', j.text))
-                arr2=" ".join(re.findall(r',(.+),',j.text))
-                arr3=" ".join(re.findall(r'[0-9]{4}',j.text))
-                arr4=" ".join(re.findall(r'\\t(.+?),',j.text))
-                e = Education(user=request.user)
-                e.degree = arr
-                e.department = arr4
-                e.year = arr3
-                e.institute = arr2
-                e.country="India"
-                e.save()
+                if j.text:
+                    arr = " ".join(re.findall(r'(.+)?\\n', j.text))
+                    arr2=" ".join(re.findall(r',(.+),',j.text))
+                    arr3=" ".join(re.findall(r'[0-9]{4}',j.text))
+                    arr4 = " ".join(re.findall(r'\\t([^\\t].*),', j.text))
+                    e = Education(user=request.user)
+                    e.degree = arr
+                    e.department = arr4
+                    e.year = arr3
+                    e.institute = arr2
+                    e.country="India"
+                    e.save()
 
 
 #u='http://jatinga.iitg.ernet.in/cseintranet/intranet-pages/jatin'

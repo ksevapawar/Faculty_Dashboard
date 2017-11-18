@@ -29,11 +29,11 @@ def index(request):
             website = cleaned_data['website']
             page = urllib.request.urlopen(website).read()
             html = BeautifulSoup(str(page), "lxml")
-            #achieve(request, html)
-            #pjt(request,html)
-            #publ(request,html)
-            #teach(request,html)
-            #meta_data(request,html)
+            achieve(request, html)
+            pjt(request,html)
+            publ(request,html)
+            teach(request,html)
+            meta_data(request,html)
             educate(request,html)
 
         return redirect('/accounts/profile/')
