@@ -219,10 +219,12 @@ def find_user_by_name(request):
             cleaned_data = form.cleaned_data
             query_name = cleaned_data['query']
             qs = User.objects.all()
+            dep=User.objects.all()
             for term in query_name.split():
                 qs = qs.filter( Q(first_name__icontains = term) | Q(last_name__icontains = term))
+                dep = dep.filter(employee__department__contains = term )
 
-            return render(request,'main/search.html',{'results':qs  })
+            return render(request,'main/search.html',{'results':qs , 'resultss':dep })
         else:
             return render(request,'main/search.html')
     else:
