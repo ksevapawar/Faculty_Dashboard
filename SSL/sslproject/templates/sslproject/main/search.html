@@ -113,7 +113,15 @@ if (!document.location.hash){
       <li>
       <img style="max-width: 100px; max-height: 100px; float: left; margin: 0 15px 0 0;" src=" {{item.employee.avatar.url}}" >
       <h3><a href="/profile/{{item.username}}">{{item.first_name}} {{item.last_name}}</a></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+      <br>
+    </li>
+    <br><br>
+    {% endfor %}
+    {% for item in resultss %}
+      <li>
+      <img style="max-width: 100px; max-height: 100px; float: left; margin: 0 15px 0 0;" src=" {{item.employee.avatar.url}}" >
+      <h3><a href="/profile/{{item.username}}">{{item.first_name}} {{item.last_name}}</a></h3>
+      <br>
     </li>
     <br><br>
     {% endfor %}
