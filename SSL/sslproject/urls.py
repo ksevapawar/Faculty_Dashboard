@@ -25,6 +25,7 @@ from . import views
 urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', views.logout_view, name='logout'),
+    url(r'^a/$', views.webmail, name='webmail'),
     url(r'^accounts/profile/$', views.index,name='index'),
     url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^accounts/profile/user/$', views.edit_profile, name='user'),

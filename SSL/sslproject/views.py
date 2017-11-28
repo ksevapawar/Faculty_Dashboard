@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from sslproject.Crawler.Awards import *
+from sslproject.Crawler.email import func
 from sslproject.models import Employee, Teaching, Publication, Education, Projects, Achievements
 from sslproject.forms import SignUpForm, EditProfileForm, EditProfileForm2, SignUpForm2, Teachingform, Publicationform, \
     Educationform, Projectsform, Achievementsform, SearchForm, WebsiteForm
@@ -19,6 +20,8 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from bs4 import BeautifulSoup
 import urllib.request
+from flask import Flask
+app = Flask(__name__)
 
 @login_required(login_url='/login')
 def index(request):
@@ -40,6 +43,13 @@ def index(request):
 
     else:
         return render(request, 'dashboard/index.html')
+
+@app.route('/a/',methods=['POST'])
+def webmail(request):
+    func(request)
+    return redirect('/accounts/profile/')
+
+
 
 def user_table(request):
        return render(request, 'dashboard/teaching.html')
