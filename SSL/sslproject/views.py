@@ -62,6 +62,9 @@ def signup(request):
             user = authenticate(username=username, password=raw_password)
             login(request, user)
             return redirect('login')
+        else:
+            return render(request, 'signup.html', {'form_errors': form.errors})
+
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
@@ -80,6 +83,7 @@ def edit_profile(request):
         form2 = EditProfileForm2(request.POST,request.FILES, instance=request.user.employee)
         if form.is_valid():
             form.save()
+
         if form2.is_valid():
             form2.save()
         return redirect('/accounts/profile/user')
