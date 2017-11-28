@@ -210,7 +210,8 @@ def show_main(request,username= None):
     edu=Education.objects.filter(user=user.id)
     publication = Publication.objects.filter(user= user.id)
     achievements = Achievements.objects.filter(user=user.id)
-    return render(request, 'profile/personal_page.html',{'user':user,'teaching':teach,'education':edu,'publications':publication,'achievements':achievements,})
+    project = Projects.objects.filter(user=user.id)
+    return render(request, 'profile/personal_page.html',{'user':user,'teaching':teach,'education':edu,'publications':publication,'achievements':achievements,'project':project},)
 
 def find_user_by_name(request):
     form = SearchForm(request.POST)
