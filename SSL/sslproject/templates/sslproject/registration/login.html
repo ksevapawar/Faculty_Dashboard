@@ -22,7 +22,7 @@
 							var captcha_response = grecaptcha.getResponse();
 								if(captcha_response.length == 0)
 										{
-
+										window.alert("incorrect captcha");
     									return false;
 										}
 								else
@@ -35,7 +35,7 @@
 			{% block content %}
 		
 			 
-			<form method="POST" onsubmit="return vvalidateform();">
+			<form method="POST" onsubmit="return validateform();">
 	
 			     {% csrf_token %}		       	
 			   	 
