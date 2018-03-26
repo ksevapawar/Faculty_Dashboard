@@ -61,6 +61,8 @@ Verify the deployment by navigating to your server address in your preferred bro
 ```sh
 127.0.0.1:8000
 ```
+
+
 ### Screenshots 
 ![Login](/screenshots/login.png?raw=true "Login")
 ![search](/screenshots/search.png?raw=true "search")
@@ -72,9 +74,11 @@ Verify the deployment by navigating to your server address in your preferred bro
 ![student1](/screenshots/student1.png?raw=true "student1")
 ![student2](/screenshots/student2.png?raw=true "student2")
 
+
+Template - https://www.creative-tim.com/product/material-dashboard
+
 License
 ----
-
 MIT
 
 
