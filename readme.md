@@ -8,7 +8,7 @@ The project is a smart portal management for the faculty of any educational inst
   - Web Scrapper to fetch data from the old faculty website based on a static template
 
 
-### Recquirements
+### Requirements
 
 * Django ( pip install django )
 * Beautiful Soup ( pip install beautifulsoup4 )
@@ -61,6 +61,9 @@ Verify the deployment by navigating to your server address in your preferred bro
 ```sh
 127.0.0.1:8000
 ```
+### Screenshots 
+![Login](/screenshots/login.jpg?raw=true "Login")
+
 
 License
 ----
