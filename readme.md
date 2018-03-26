@@ -62,8 +62,15 @@ Verify the deployment by navigating to your server address in your preferred bro
 127.0.0.1:8000
 ```
 ### Screenshots 
-![Login](/screenshots/login.jpg?raw=true "Login")
-
+![Login](/screenshots/login.png?raw=true "Login")
+![search](/screenshots/search.png?raw=true "search")
+![signup](/screenshots/signup.png?raw=true "signup")
+![user](/screenshots/user.png?raw=true "user")
+![dashboard](/screenshots/dashboard.png?raw=true "dashboard")
+![teaching](/screenshots/teaching.png?raw=true "teaching")
+![Scraper](/screenshots/Scraper.png?raw=true "Scraper")
+![student1](/screenshots/student1.png?raw=true "student1")
+![student2](/screenshots/student2.png?raw=true "student2")
 
 License
 ----
@@ -71,4 +78,4 @@ License
 MIT
 
 
-**Free Software, Hell Yeah!**
+
